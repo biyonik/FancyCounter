@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background-image: radial-gradient(ellipse, #385300, #212900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    all: unset;
+}
+
+.counter {
+    background-color: #BEF227;
+    width: 29.75em;
+    height: 38.4375em;
+    border-radius: .75em;
+    box-shadow: 0 1.5625em 7.5625em rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter__title {
+    font-size: 2rem;
+    text-align: center;
+    opacity: .6;
+    text-transform: uppercase;
+    width: 12.5em;
+    font-weight: 500;
+    line-height: 0.9;
+    margin-top: 1.75em;
+}
+
+.counter__value {
+    font-size: 12.5rem;
+    font-weight: 600;
+    color: #1D2507;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.counter__reset-button {
+    cursor: pointer;
+}
+
+.counter__reset-icon {
+    opacity: 0.3;
+    font-size: 2.1875rem;
+    transition: all 0.4s;
+}
+
+.counter__reset-icon:hover {
+    opacity: 0.5;
+}
+
+.counter__buttons {
+    background-color: #1D2507;
+    min-height: 7.25em;
+    width: 100%;
+    margin-top: auto;
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
+    display: flex;
+}
+
+.counter__button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition: all 0.4s;
+}
+
+.counter__button:hover {
+    background-color: #212B06;
+}
+
+.counter__button--decrease {
+}
+
+.counter__button--decrease:hover {
+    border-bottom-left-radius: .75em;
+}
+
+.counter__icon {
+    color: #BDFE00;
+    opacity: 0.9;
+    font-size: 2.5rem;
+}
+
+.counter__icon--minus {}
+
+.counter__button--increase {
+    border-left: 1px solid rgb(189, 254, 0, .15);
+}
+
+.counter__button--increase:hover {
+    border-bottom-right-radius: .75em;
+}
+
+.counter__icon--plus {}
+
+@media(max-width: 680px) or (max-height: 730px) {
+    .counter {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .counter__title {
+        margin-top: 100px;
+    }
+
+    .counter__buttons, .counter__buttons:hover {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
